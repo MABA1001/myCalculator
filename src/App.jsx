@@ -7,10 +7,15 @@ function App() {
   const [enteredKeys,setEnterdKeys]=useState('');
 
   const calculateREsult=(string)=>{
-    setEnterdKeys(eval(string))
+    try{
+      setEnterdKeys(eval(string))
+    }
+    catch(e)
+    {
+      setEnterdKeys("Error 'Press C'");
+    }
+   
 };
-
-
   const gettingInputsHandler=(val)=>{
 
     if(val=='C')
