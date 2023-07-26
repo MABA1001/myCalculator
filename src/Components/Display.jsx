@@ -4,7 +4,7 @@ import './Display.css'
 
 export default function Display(props) {
   return (
-    <div>
+    <div className='input-box'>
         <label>
             <input type="text" name="display" id="1" value={props.onKeyPress} readOnly/>
         </label>

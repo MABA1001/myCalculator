@@ -12,7 +12,6 @@ function App() {
     try{
       if(expression!=="")
       {
-
         //setEnterdKeys(eval(expression));
         const processedExpression = expression.replace(/(?<!\d)0+(?=\d+(\.\d*)?)/g, "");
       const result = parseFloat(eval(processedExpression));
@@ -25,6 +24,8 @@ function App() {
     }
    
 };
+
+  
   const gettingInputsHandler=(val)=>{
 
     if(val=='C')
@@ -40,7 +41,7 @@ function App() {
 
   return (
     <div className='main'>
-    <Display onKeyPress={enteredKeys}/>
+    <Display onKeyPress={enteredKeys} />
     <Keypad onGetInputs={gettingInputsHandler}/>  
     </div>
   )

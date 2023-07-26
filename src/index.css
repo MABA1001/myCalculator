@@ -8,4 +8,7 @@ body{
     height: 100vh; 
     background-color: #e9c46a;
     font-family: 'Tektur', cursive;
+    position: relative; /* Set the container to relative positioning */
+    width: 100%;
+     height: 100vh;
 }

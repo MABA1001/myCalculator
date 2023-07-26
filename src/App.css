@@ -1,10 +1,8 @@
 .main{
-    border: 2px solid black;
     width: 40%;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #353535;
+    height: 50%;
+    position: absolute; /* Position the div absolutely */
+  top: 50%; /* Set the top position to 50% of the container */
+  left: 50%; /* Set the left position to 50% of the container */
+  transform: translate(-50%, -50%); /* Use transform to adjust the position to the center */
 }
