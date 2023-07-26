@@ -3,12 +3,17 @@ import Display from './Components/Display'
 import Keypad from './Components/keypad'
 import { useState } from 'react';
 
+
+
 function App() {
   const [enteredKeys,setEnterdKeys]=useState('');
 
-  const calculateREsult=(string)=>{
+  const calculateResult=(expression)=>{
     try{
-      setEnterdKeys(eval(string))
+      if(expression!=="")
+      {
+        setEnterdKeys(eval(expression));
+      }
     }
     catch(e)
     {
@@ -23,7 +28,7 @@ function App() {
       setEnterdKeys("");
     }
     else if(val==="="){
-      calculateREsult(enteredKeys)
+      calculateResult(enteredKeys)
     }else{
       setEnterdKeys((prvStat)=>prvStat+=val)
     }
@@ -37,4 +42,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
