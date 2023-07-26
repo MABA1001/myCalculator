@@ -12,7 +12,11 @@ function App() {
     try{
       if(expression!=="")
       {
-        setEnterdKeys(eval(expression));
+
+        //setEnterdKeys(eval(expression));
+        const processedExpression = expression.replace(/(?<!\d)0+(?=\d+(\.\d*)?)/g, "");
+      const result = parseFloat(eval(processedExpression));
+      setEnterdKeys(result);
       }
     }
     catch(e)
