@@ -9,6 +9,8 @@ function App() {
   const [enteredKeys,setEnterdKeys]=useState('');
 
   const calculateResult=(expression)=>{
+
+    console.log(expression)
     try{
       if(expression!=="")
       {
@@ -25,8 +27,19 @@ function App() {
    
 };
 
-  
-  const gettingInputsHandler=(val)=>{
+const gettingChangeHandler=(e)=>{
+console.log(e.target.value)
+
+
+if(e.target.value.slice(-1)==="="){
+  calculateResult(e.target.value.slice(0,e.target.value.length-1))
+  return;
+}
+setEnterdKeys(e.target.value)
+
+
+}
+const gettingInputsHandler=(val)=>{
 
     if(val=='C')
     {
@@ -41,7 +54,7 @@ function App() {
 
   return (
     <div className='main'>
-    <Display onKeyPress={enteredKeys} />
+    <Display onKeyPress={enteredKeys} onInputChange={gettingChangeHandler}/>
     <Keypad onGetInputs={gettingInputsHandler}/>  
     </div>
   )

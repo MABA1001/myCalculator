@@ -2,16 +2,16 @@
     width: 23.5%;
     margin: 3px;
     font-size: 2.5rem;
-    background-color: #3c6e71;
-  
+    background-color: #3c6e71; 
     border: none;
     cursor: pointer;
     padding: 5px;
     margin-bottom: 0.5rem;
+    color: white;
 }
 
 .btn:hover{
-    background: #000;
-    color: white;
+    color: #3c6e71;
+    background-color: white !important;
     font-weight: 400px;
 }
